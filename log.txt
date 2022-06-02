@@ -1,0 +1,2 @@
+/home/tranquang/Desktop/project/automation/copySpecificFile/test/test.txt
+/home/tranquang/Desktop/project/automation/copySpecificFile/test/testcopy/test.txt
