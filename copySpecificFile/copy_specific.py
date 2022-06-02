@@ -16,11 +16,23 @@ class CopyToDest:
         self.dest_path = dest_path
         self.log_file_have_copied = []
 
-    def copyFile(self):
-        print('Find the specific file and copy to the destination folder!\n ----------- List file: ')
+    def printInfor(self):
+        # Print list file
+        print('\n---------------- List file: ')
         for fileNeedDelete in self.list_file:
             print ('\t->' + fileNeedDelete)
+            
+        # Folder to find
+        print('\n ---------------- Folder to find: ')
+        print ('\t->' + self.src_path)
 
+        # Folder copy to
+        print('\n---------------- Folder copy to: ')
+        print ('\t->' + self.dest_path)
+
+    def copyFile(self):
+        print('Find the specific file and copy to the destination folder!')
+        self.printInfor()
         # Recursive find the file in list from the wanted folder
         # fileNames = os.listdir(self.src_path)
         # for fileName in fileNames:
@@ -46,10 +58,8 @@ class CopyToDest:
                     self.log_file_have_copied.append(self.src_path)      
 
     def deleteFileCopy(self, folder):
+        self.printInfor()
         file_avoid = [__file__, "TBD.txt"]
-
-        
-
         for file in os.listdir(folder):
             if file in self.list_file:
                 print("Delete {} from".format( file ) + folder)
@@ -68,7 +78,7 @@ class CopyToDest:
 
 
 
-if __name__ == '__main__':
+if __name__ == '__main__'   :
 
     # folder_build = r'D:\PROJECT\Intergrator\mono_radar_learning\build'
     # folder_ipif = r'D:\PROJECT\Intergrator\mono_radar_learning\ip_if'
@@ -95,5 +105,5 @@ if __name__ == '__main__':
 
     copyObj = CopyToDest(list_file, folder_test, dest_test) 
     copyObj.deleteFileCopy(dest_test)
-    copyObj.copyFile()
+    # copyObj.copyFile()
     # copyObj.writeLogToFile('log.txt')
