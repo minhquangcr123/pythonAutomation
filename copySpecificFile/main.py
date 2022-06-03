@@ -138,7 +138,7 @@ if __name__ == '__main__'   :
     # Copy file, delete file, write log file
     copyObj = CopyToDest(list_file, dest_test) 
     copyObj.printInfor()
-    copyObj.copyFile(folder_build)
-    copyObj.writeLogToFile('log.txt')
+    # copyObj.copyFile(folder_build)
+    # copyObj.writeLogToFile('log.txt')
     copyObj.deleteFileCopy(r'D:\PROJECT\Competences\pythonAutomation\copySpecificFile\forCopyTo')
     
