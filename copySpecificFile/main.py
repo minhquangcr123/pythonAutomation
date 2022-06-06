@@ -1,6 +1,7 @@
 #!/bin/env python3
 
 import os
+import sys
 import shutil
 
 # For color in command promt
@@ -29,7 +30,7 @@ def displayException(message, number=STATUS.SUCCESS):
     if number == 1:
         print(bcolors.WARNING + message + bcolors.ENDC)
     if number == 2:
-        print(bcolors.FAILT + message + bcolors.ENDC)
+        print(bcolors.FAIL + message + bcolors.ENDC)
 
 class CopyToDest:
     # list_file:    List file that you using to try to find and copy to dest
@@ -41,6 +42,10 @@ class CopyToDest:
         self.src_path = ' '
         self.dest_path = dest_path
         self.log_file_have_copied = []
+
+    def setSourcePath(self, folder):
+        self.src_path = folder
+
 
     def printInfor(self):
         print('Display some information :')
@@ -112,33 +117,39 @@ class CopyToDest:
 
 
 if __name__ == '__main__'   :
+    if (len(sys.argv) > 2):
+        displayException("Argument(s) passed : {}".format(str(sys.argv)),STATUS.WARNING)
+        folder_build = r'D:\PROJECT\Intergrator\mono_radar_learning\build'
+        folder_ipif = r'D:\PROJECT\Intergrator\mono_radar_learning\ip_if'
+        
 
-    folder_build = r'D:\PROJECT\Intergrator\mono_radar_learning\build'
-    folder_ipif = r'D:\PROJECT\Intergrator\mono_radar_learning\ip_if'
-    folder_test = r'D:\PROJECT\Competences\pythonAutomation\copySpecificFile\test'
-
-    # dest_path = r'D:\PROJECT\Competences\AutomationTool'
-    dest_test = r'D:\PROJECT\Competences\pythonAutomation\copySpecificFile\forCopyTo'
-
-    log_file_have_copied = []
-    current_dir = r'.'
-
-    list_file = [
-                    'test.txt',
-                    'Dem_Cfg_DTC_DataStructures.c', 
-                    'Dem_Cfg_DtcId.h', 
-                    'Dem_Cfg_EventId.h',
-                    'Fee_EcucValuesPro.arxml',  
-                    'Fee_Report.txt',  
-                    'Fls_Report.txt',  
-                    'NvM_Report.txt',   
-                    'rba_DemBfm.properties', 
-                    'Dem.properties',  
-                ]
-    # Copy file, delete file, write log file
-    copyObj = CopyToDest(list_file, dest_test) 
-    copyObj.printInfor()
-    # copyObj.copyFile(folder_build)
-    # copyObj.writeLogToFile('log.txt')
-    copyObj.deleteFileCopy(r'D:\PROJECT\Competences\pythonAutomation\copySpecificFile\forCopyTo')
+        # soruce, dest_path = r'D:\PROJECT\Competences\AutomationTool'
+        dest_test = r'D:\PROJECT\Competences\pythonAutomation\copySpecificFile\forCopyTo'
     
+        source_path = sys.argv[1] 
+        dest_path = sys.argv[2]
+        current_dir = r'.'
+
+        list_file = [
+                        'log_of_copy.txt',
+                        'test.txt',
+                        'Dem_Cfg_DTC_DataStructures.c', 
+                        'Dem_Cfg_DtcId.h', 
+                        'Dem_Cfg_EventId.h',
+                        'Fee_EcucValuesPro.arxml',  
+                        'Fee_Report.txt',  
+                        'Fls_Report.txt',  
+                        'NvM_Report.txt',   
+                        'rba_DemBfm.properties', 
+                        'Dem.properties',  
+                    ]
+        # Copy file, delete file, write log file
+        copyObj = CopyToDest(list_file, dest_path) 
+        copyObj.setSourcePath(source_path)
+        copyObj.printInfor()
+        copyObj.copyFile(folder_build)
+        copyObj.writeLogToFile('log_of_copy.txt')
+        copyObj.deleteFileCopy(dest_path)
+        
+    else:
+        displayException("Need enter <source_path> and <dest_path> for the script", STATUS.ERROR)
