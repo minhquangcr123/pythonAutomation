@@ -62,9 +62,8 @@ class CopyToDest:
         print('---------------- Destination Path: ')
         print ('\t->' + self.dest_path + '\n')
 
-    def copyFile(self, folder):
+    def copyFile(self):
         print('Find the specific file and copy to the destination folder!')
-        self.src_path = folder
         # Recursive find the file in list from the wanted folder
         # fileNames = os.listdir(self.src_path)
         # for fileName in fileNames:
@@ -119,13 +118,6 @@ class CopyToDest:
 if __name__ == '__main__'   :
     if (len(sys.argv) > 2):
         displayException("Argument(s) passed : {}".format(str(sys.argv)),STATUS.WARNING)
-        folder_build = r'D:\PROJECT\Intergrator\mono_radar_learning\build'
-        folder_ipif = r'D:\PROJECT\Intergrator\mono_radar_learning\ip_if'
-        
-
-        # soruce, dest_path = r'D:\PROJECT\Competences\AutomationTool'
-        dest_test = r'D:\PROJECT\Competences\pythonAutomation\copySpecificFile\forCopyTo'
-    
         source_path = sys.argv[1] 
         dest_path = sys.argv[2]
         current_dir = r'.'
@@ -147,9 +139,10 @@ if __name__ == '__main__'   :
         copyObj = CopyToDest(list_file, dest_path) 
         copyObj.setSourcePath(source_path)
         copyObj.printInfor()
-        copyObj.copyFile(folder_build)
-        copyObj.writeLogToFile('log_of_copy.txt')
         copyObj.deleteFileCopy(dest_path)
+        copyObj.copyFile()
+        # copyObj.writeLogToFile('log_of_copy.txt')
+        
         
     else:
         displayException("Need enter <source_path> and <dest_path> for the script", STATUS.ERROR)
