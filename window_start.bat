@@ -2,17 +2,8 @@
 @REM Start application - Tran Minh Quang 
 ECHO Start application - Tran Minh Quang 
 COLOR 
-echo. & echo %* %0 %1 %~1 %~dp0 
 
-set getOption=yes
-If "%getOption%" equ  "yes" (
-   set /P option=Enter option: 
-   echo Option read: %option%
-)
-
-Set "_var=first"
-Set "_var=second" & Echo %_var%
-
+FOR /F "tokens=*" %%g IN ('"%SystemDrive%\PROGRA~1\Git\cmd\git.exe log -n 1 --pretty=format:"%%an""') do (SET CHANGE_AUTHOR_DISPLAY=%%g)
 @REM Running application
 @REM SET /p source_path="Enter your directory you want to copy list file: "
 @REM SET /p dest_path="Enter your destination path: "
