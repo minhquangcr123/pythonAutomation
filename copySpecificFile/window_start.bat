@@ -3,7 +3,6 @@
 ECHO Start application - Tran Minh Quang 
 COLOR 
 
-FOR /F "tokens=*" %%g IN ('"%SystemDrive%\PROGRA~1\Git\cmd\git.exe log -n 1 --pretty=format:"%%an""') do (SET CHANGE_AUTHOR_DISPLAY=%%g)
 @REM Running application
 @REM SET /p source_path="Enter your directory you want to copy list file: "
 @REM SET /p dest_path="Enter your destination path: "
@@ -24,5 +23,5 @@ FOR /F "tokens=*" %%g IN ('"%SystemDrive%\PROGRA~1\Git\cmd\git.exe log -n 1 --pr
 @REM     SET dest_path=D:\PROJECT\Competences\pythonAutomation\copySpecificFile\forCopyTo
 @REM )
 
-@REM python copySpecificFile/copyFile.py %source_path% %dest_path%
+@REM python copyFile.py %source_path% %dest_path%
 @REM IF %ERRORLEVEL%==0 start "" "%dest_path%"
