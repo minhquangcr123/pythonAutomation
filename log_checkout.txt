@@ -1,0 +1,84 @@
+[2022-06-14T12:42:57.422Z] 
+[2022-06-14T12:42:57.422Z] D:\Jenkins\ws\FR@1>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git ls-remote --heads --tags ssh://git@sourcecode01.de.bosch.com:7999/pj_radcn/radcn_fr.git "refs/tags/feature/FRMRRFIVECA-13941-ca-new-project-c385-add-comment-for-vmc_postuser" "refs/heads/feature/FRMRRFIVECA-13941-ca-new-project-c385-add-comment-for-vmc_postuser" ) 1>"D:\Jenkins\ws\FR@1\tmp_687927.tmp" 
+[2022-06-14T12:43:06.702Z] 
+[2022-06-14T12:43:06.702Z] D:\Jenkins\ws\FR@1>del "D:\Jenkins\ws\FR@1\tmp_687927.tmp" 
+[2022-06-14T12:43:12.673Z] 
+[2022-06-14T12:43:12.673Z] D:\Jenkins\ws\FR@1>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git ls-remote --heads --tags ssh://git@sourcecode01.de.bosch.com:7999/pj_radcn/radcn_fr.git "refs/tags/develop_ca_c385" "refs/heads/develop_ca_c385" ) 1>"D:\Jenkins\ws\FR@1\tmp_770514.tmp" 
+[2022-06-14T12:43:22.917Z] 
+[2022-06-14T12:43:22.917Z] D:\Jenkins\ws\FR@1>del "D:\Jenkins\ws\FR@1\tmp_770514.tmp" 
+[2022-06-14T12:43:27.876Z] 
+[2022-06-14T12:43:27.876Z] D:\Jenkins\ws\FR@1>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git ls-remote --heads --tags ssh://git@sourcecode01.de.bosch.com:7999/pj_radcn/radcn_fr.git "refs/tags/develop_ca_c385" "refs/heads/develop_ca_c385" ) 1>"D:\Jenkins\ws\FR@1\tmp_842391.tmp" 
+[2022-06-14T12:43:46.250Z] 
+[2022-06-14T12:43:46.250Z] D:\Jenkins\ws\FR@1>del "D:\Jenkins\ws\FR@1\tmp_842391.tmp" 
+[2022-06-14T12:43:47.663Z] [14:43:47][INFO] Checking out the target branch 'develop_ca_c385' of the main repository
+[2022-06-14T12:43:51.120Z] 
+[2022-06-14T12:43:51.120Z] D:\Jenkins\ws\FR@1\repo>(del /S *.lock ) 1>"D:\Jenkins\ws\FR@1\tmp_366248.tmp" 2>&1 
+[2022-06-14T12:43:59.264Z] 
+[2022-06-14T12:43:59.264Z] D:\Jenkins\ws\FR@1\repo>(git rev-parse --git-dir ) 1>"D:\Jenkins\ws\FR@1\tmp_911214.tmp" 
+[2022-06-14T12:44:04.588Z] 
+[2022-06-14T12:44:04.588Z] D:\Jenkins\ws\FR@1\repo>del "D:\Jenkins\ws\FR@1\tmp_911214.tmp" 
+[2022-06-14T12:44:08.899Z] 
+[2022-06-14T12:44:08.899Z] D:\Jenkins\ws\FR@1\repo>(git config --get remote.origin.url ) 1>"D:\Jenkins\ws\FR@1\tmp_300972.tmp" 
+[2022-06-14T12:44:14.208Z] 
+[2022-06-14T12:44:14.208Z] D:\Jenkins\ws\FR@1\repo>del "D:\Jenkins\ws\FR@1\tmp_300972.tmp" 
+[2022-06-14T12:44:20.534Z] 
+[2022-06-14T12:44:20.534Z] D:\Jenkins\ws\FR@1\repo>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git fetch -p --recurse-submodules=no origin  "acef596425689bdac7f2cb8fa8677b1b906e15e5" -- ) 1>"D:\Jenkins\ws\FR@1\tmp_345207.tmp" 2>&1 
+[2022-06-14T12:44:31.932Z] 
+[2022-06-14T12:44:31.932Z] D:\Jenkins\ws\FR@1\repo>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git checkout -f "acef596425689bdac7f2cb8fa8677b1b906e15e5" -- ) 1>"D:\Jenkins\ws\FR@1\tmp_34901.tmp" 2>&1 
+[2022-06-14T12:44:37.610Z] 
+[2022-06-14T12:44:37.610Z] D:\Jenkins\ws\FR@1\repo>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git reset --hard "acef596425689bdac7f2cb8fa8677b1b906e15e5" -- ) 1>"D:\Jenkins\ws\FR@1\tmp_577177.tmp" 2>&1 
+[2022-06-14T12:44:43.097Z] 
+[2022-06-14T12:44:43.097Z] D:\Jenkins\ws\FR@1\repo>(git clean -xffd ) 1>"D:\Jenkins\ws\FR@1\tmp_510993.tmp" 2>&1 
+[2022-06-14T12:44:54.401Z] 
+[2022-06-14T12:44:54.401Z] D:\Jenkins\ws\FR@1\repo>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git submodule sync --recursive ) 1>"D:\Jenkins\ws\FR@1\tmp_753166.tmp" 2>&1 
+[2022-06-14T12:45:00.310Z] 
+[2022-06-14T12:45:00.310Z] D:\Jenkins\ws\FR@1\repo>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git submodule update --init --recursive --force  ) 1>"D:\Jenkins\ws\FR@1\tmp_978944.tmp" 2>&1 
+[2022-06-14T12:48:33.584Z] 
+[2022-06-14T12:48:33.584Z] D:\Jenkins\ws\FR@1\repo>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git submodule foreach --recursive "git reset --hard HEAD && git clean -xffd" ) 1>"D:\Jenkins\ws\FR@1\tmp_387513.tmp" 2>&1 
+[2022-06-14T12:48:59.333Z] 
+[2022-06-14T12:48:59.333Z] D:\Jenkins\ws\FR@1\repo\apl\CA>(del /S *.lock ) 1>"D:\Jenkins\ws\FR@1\tmp_50197.tmp" 2>&1 
+[2022-06-14T12:49:06.160Z] 
+[2022-06-14T12:49:06.160Z] D:\Jenkins\ws\FR@1\repo\apl\CA>(git rev-parse --git-dir ) 1>"D:\Jenkins\ws\FR@1\tmp_466436.tmp" 
+[2022-06-14T12:49:12.782Z] 
+[2022-06-14T12:49:12.782Z] D:\Jenkins\ws\FR@1\repo\apl\CA>del "D:\Jenkins\ws\FR@1\tmp_466436.tmp" 
+[2022-06-14T12:49:18.907Z] 
+[2022-06-14T12:49:18.907Z] D:\Jenkins\ws\FR@1\repo\apl\CA>(git config --get remote.origin.url ) 1>"D:\Jenkins\ws\FR@1\tmp_237797.tmp" 
+[2022-06-14T12:49:26.860Z] 
+[2022-06-14T12:49:26.860Z] D:\Jenkins\ws\FR@1\repo\apl\CA>del "D:\Jenkins\ws\FR@1\tmp_237797.tmp" 
+[2022-06-14T12:49:34.496Z] 
+[2022-06-14T12:49:34.496Z] D:\Jenkins\ws\FR@1\repo\apl\CA>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git fetch -p --recurse-submodules=no origin  "4302035dd760a7194562521628e1708fb2fa7b52" -- ) 1>"D:\Jenkins\ws\FR@1\tmp_930019.tmp" 2>&1 
+[2022-06-14T12:49:45.832Z] 
+[2022-06-14T12:49:45.832Z] D:\Jenkins\ws\FR@1\repo\apl\CA>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git checkout -f "4302035dd760a7194562521628e1708fb2fa7b52" -- ) 1>"D:\Jenkins\ws\FR@1\tmp_527335.tmp" 2>&1 
+[2022-06-14T12:49:53.099Z] 
+[2022-06-14T12:49:53.099Z] D:\Jenkins\ws\FR@1\repo\apl\CA>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git reset --hard "4302035dd760a7194562521628e1708fb2fa7b52" -- ) 1>"D:\Jenkins\ws\FR@1\tmp_342793.tmp" 2>&1 
+[2022-06-14T12:50:01.933Z] 
+[2022-06-14T12:50:01.933Z] D:\Jenkins\ws\FR@1\repo\apl\CA>(git clean -xffd ) 1>"D:\Jenkins\ws\FR@1\tmp_232726.tmp" 2>&1 
+[2022-06-14T12:50:04.564Z] [14:50:04][WARNING] Output of command is empty. Check if 'cmdLog' is the right usage for that command
+[2022-06-14T12:50:20.209Z] 
+[2022-06-14T12:50:20.209Z] D:\Jenkins\ws\FR@1\repo\apl\CA>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git fetch -p --recurse-submodules=no "origin" "develop_ca_c385" -- ) 1>"D:\Jenkins\ws\FR@1\tmp_723481.tmp" 2>&1 
+[2022-06-14T12:50:33.756Z] 
+[2022-06-14T12:50:33.756Z] D:\Jenkins\ws\FR@1\repo\apl\CA>(git config user.name ) 1>"D:\Jenkins\ws\FR@1\tmp_2867.tmp" 
+[2022-06-14T12:50:41.366Z] 
+[2022-06-14T12:50:41.366Z] D:\Jenkins\ws\FR@1\repo\apl\CA>del "D:\Jenkins\ws\FR@1\tmp_2867.tmp" 
+[2022-06-14T12:50:47.691Z] 
+[2022-06-14T12:50:47.691Z] D:\Jenkins\ws\FR@1\repo\apl\CA>(git config user.email ) 1>"D:\Jenkins\ws\FR@1\tmp_755741.tmp" 
+[2022-06-14T12:50:54.042Z] 
+[2022-06-14T12:50:54.042Z] D:\Jenkins\ws\FR@1\repo\apl\CA>del "D:\Jenkins\ws\FR@1\tmp_755741.tmp" 
+[2022-06-14T12:51:02.882Z] 
+[2022-06-14T12:51:02.882Z] D:\Jenkins\ws\FR@1\repo\apl\CA>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no   && git merge "bf72a925ce1d5aeb96b81ad2ea66784e16eca9e1" --squash ) 1>"D:\Jenkins\ws\FR@1\tmp_288176.tmp" 2>&1 
+[2022-06-14T12:51:10.186Z] 
+[2022-06-14T12:51:10.186Z] D:\Jenkins\ws\FR@1\repo\apl\CA>del "D:\Jenkins\ws\FR@1\tmp_288176.tmp" 
+[2022-06-14T12:51:11.374Z] [14:51:11][INFO] Merge was a success.
+[2022-06-14T12:51:20.044Z] 
+[2022-06-14T12:51:20.044Z] D:\Jenkins\ws\FR@1\repo\apl\CA>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git submodule sync --recursive ) 1>"D:\Jenkins\ws\FR@1\tmp_830398.tmp" 2>&1 
+[2022-06-14T12:51:29.111Z] 
+[2022-06-14T12:51:29.111Z] D:\Jenkins\ws\FR@1\repo\apl\CA>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git submodule update --init --recursive --force  ) 1>"D:\Jenkins\ws\FR@1\tmp_709718.tmp" 2>&1 
+[2022-06-14T12:51:39.404Z] 
+[2022-06-14T12:51:39.404Z] D:\Jenkins\ws\FR@1\repo\apl\CA>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git submodule foreach --recursive "git reset --hard HEAD && git clean -xffd" ) 1>"D:\Jenkins\ws\FR@1\tmp_842696.tmp" 2>&1 
+[2022-06-14T12:51:42.089Z] [14:51:42][INFO] Merging 'develop_ca_c385' was a success.
+[2022-06-14T12:51:45.606Z] 
+[2022-06-14T12:51:45.606Z] D:\Jenkins\ws\FR@1\repo\apl\CA>(git log -n 1 --pretty=format:commitHash:%H;abbreviatedCommitHash:%h;treeHash:%T;abbreviatedTreeHash:%t;parentHashes:%P;abbreviatedParentHashes:%p;authorName:%an;authorEmail:%ae;authorTimestamp:%at;committerName:%cn;committerEmail:%ce;committerTimestamp:%ct;refNames:%D;sanitizedSubjectLine:%f; ) 1>"D:\Jenkins\ws\FR@1\tmp_768687.tmp" 
+[2022-06-14T12:51:51.516Z] 
+[2022-06-14T12:51:51.516Z] D:\Jenkins\ws\FR@1\repo\apl\CA>del "D:\Jenkins\ws\FR@1\tmp_768687.tmp" 
+[2022-06-14T12:51:56.047Z] [14:51:56][WARNING] Skipping 'Repository.prepareSubmoduleGitRepo' because no env variable of '[CR]' is present
+[2022-06-14T12:51:56.094Z] [14:51:56][WARNING] 'runIfEnvIsSet' feature is used and is effective for skipping

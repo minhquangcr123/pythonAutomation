@@ -1,0 +1,80 @@
+[2022-06-15T15:54:59.838Z] 
+[2022-06-15T15:54:59.838Z] D:\JT\ws\FR@1>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git ls-remote --heads --tags ssh://git@sourcecode01.de.bosch.com:7999/pj_radcn/radcn_fr.git "refs/tags/bugfix/FRMRRFIVECA-13966-timeGapTextInfo_TunnelDefaultValue_HmiDyFilter" "refs/heads/bugfix/FRMRRFIVECA-13966-timeGapTextInfo_TunnelDefaultValue_HmiDyFilter" ) 1>"D:\JT\ws\FR@1\tmp_7015.tmp" 
+[2022-06-15T15:55:07.510Z] 
+[2022-06-15T15:55:07.510Z] D:\JT\ws\FR@1>del "D:\JT\ws\FR@1\tmp_7015.tmp" 
+[2022-06-15T15:55:11.409Z] 
+[2022-06-15T15:55:11.409Z] D:\JT\ws\FR@1>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git ls-remote --heads --tags ssh://git@sourcecode01.de.bosch.com:7999/pj_radcn/radcn_fr.git "refs/tags/develop_ca_c385" "refs/heads/develop_ca_c385" ) 1>"D:\JT\ws\FR@1\tmp_501381.tmp" 
+[2022-06-15T15:55:17.976Z] 
+[2022-06-15T15:55:17.976Z] D:\JT\ws\FR@1>del "D:\JT\ws\FR@1\tmp_501381.tmp" 
+[2022-06-15T15:55:22.750Z] 
+[2022-06-15T15:55:22.750Z] D:\JT\ws\FR@1>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git ls-remote --heads --tags ssh://git@sourcecode01.de.bosch.com:7999/pj_radcn/radcn_fr.git "refs/tags/develop_ca_c385" "refs/heads/develop_ca_c385" ) 1>"D:\JT\ws\FR@1\tmp_952697.tmp" 
+[2022-06-15T15:55:29.305Z] 
+[2022-06-15T15:55:29.305Z] D:\JT\ws\FR@1>del "D:\JT\ws\FR@1\tmp_952697.tmp" 
+[2022-06-15T15:55:30.668Z] [17:55:30][INFO] Checking out the target branch 'develop_ca_c385' of the main repository
+[2022-06-15T15:55:33.114Z] 
+[2022-06-15T15:55:33.114Z] D:\JT\ws\FR@1\repo>(del /S *.lock ) 1>"D:\JT\ws\FR@1\tmp_49034.tmp" 2>&1 
+[2022-06-15T15:55:39.747Z] 
+[2022-06-15T15:55:39.747Z] D:\JT\ws\FR@1\repo>(git rev-parse --git-dir ) 1>"D:\JT\ws\FR@1\tmp_790581.tmp" 
+[2022-06-15T15:55:55.728Z] 
+[2022-06-15T15:55:55.728Z] D:\JT\ws\FR@1\repo>del "D:\JT\ws\FR@1\tmp_790581.tmp" 
+[2022-06-15T15:56:00.358Z] 
+[2022-06-15T15:56:00.358Z] D:\JT\ws\FR@1\repo>(git config --get remote.origin.url ) 1>"D:\JT\ws\FR@1\tmp_560605.tmp" 
+[2022-06-15T15:56:03.272Z] 
+[2022-06-15T15:56:03.272Z] D:\JT\ws\FR@1\repo>del "D:\JT\ws\FR@1\tmp_560605.tmp" 
+[2022-06-15T15:56:09.009Z] 
+[2022-06-15T15:56:09.009Z] D:\JT\ws\FR@1\repo>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git fetch -p --recurse-submodules=no origin  "acef596425689bdac7f2cb8fa8677b1b906e15e5" -- ) 1>"D:\JT\ws\FR@1\tmp_428003.tmp" 2>&1 
+[2022-06-15T15:56:16.942Z] 
+[2022-06-15T15:56:16.942Z] D:\JT\ws\FR@1\repo>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git checkout -f "acef596425689bdac7f2cb8fa8677b1b906e15e5" -- ) 1>"D:\JT\ws\FR@1\tmp_662884.tmp" 2>&1 
+[2022-06-15T15:56:22.754Z] 
+[2022-06-15T15:56:22.754Z] D:\JT\ws\FR@1\repo>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git reset --hard "acef596425689bdac7f2cb8fa8677b1b906e15e5" -- ) 1>"D:\JT\ws\FR@1\tmp_783460.tmp" 2>&1 
+[2022-06-15T15:56:27.467Z] 
+[2022-06-15T15:56:27.467Z] D:\JT\ws\FR@1\repo>(git clean -xffd ) 1>"D:\JT\ws\FR@1\tmp_486192.tmp" 2>&1 
+[2022-06-15T15:56:37.311Z] 
+[2022-06-15T15:56:37.311Z] D:\JT\ws\FR@1\repo>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git submodule sync --recursive ) 1>"D:\JT\ws\FR@1\tmp_536416.tmp" 2>&1 
+[2022-06-15T15:56:45.148Z] 
+[2022-06-15T15:56:45.148Z] D:\JT\ws\FR@1\repo>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git submodule update --init --recursive --force  ) 1>"D:\JT\ws\FR@1\tmp_23047.tmp" 2>&1 
+[2022-06-15T15:59:10.273Z] 
+[2022-06-15T15:59:10.273Z] D:\JT\ws\FR@1\repo>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git submodule foreach --recursive "git reset --hard HEAD && git clean -xffd" ) 1>"D:\JT\ws\FR@1\tmp_79054.tmp" 2>&1 
+[2022-06-15T15:59:29.628Z] 
+[2022-06-15T15:59:29.628Z] D:\JT\ws\FR@1\repo\apl\CA>(del /S *.lock ) 1>"D:\JT\ws\FR@1\tmp_925031.tmp" 2>&1 
+[2022-06-15T15:59:34.249Z] 
+[2022-06-15T15:59:34.249Z] D:\JT\ws\FR@1\repo\apl\CA>(git rev-parse --git-dir ) 1>"D:\JT\ws\FR@1\tmp_703735.tmp" 
+[2022-06-15T15:59:38.008Z] 
+[2022-06-15T15:59:38.008Z] D:\JT\ws\FR@1\repo\apl\CA>del "D:\JT\ws\FR@1\tmp_703735.tmp" 
+[2022-06-15T15:59:41.490Z] 
+[2022-06-15T15:59:41.490Z] D:\JT\ws\FR@1\repo\apl\CA>(git config --get remote.origin.url ) 1>"D:\JT\ws\FR@1\tmp_364123.tmp" 
+[2022-06-15T15:59:46.033Z] 
+[2022-06-15T15:59:46.033Z] D:\JT\ws\FR@1\repo\apl\CA>del "D:\JT\ws\FR@1\tmp_364123.tmp" 
+[2022-06-15T15:59:50.447Z] 
+[2022-06-15T15:59:50.447Z] D:\JT\ws\FR@1\repo\apl\CA>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git fetch -p --recurse-submodules=no origin  "0cbb440d66e3f85f140966f95b033add442da5d0" -- ) 1>"D:\JT\ws\FR@1\tmp_204688.tmp" 2>&1 
+[2022-06-15T15:59:59.195Z] 
+[2022-06-15T15:59:59.195Z] D:\JT\ws\FR@1\repo\apl\CA>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git checkout -f "0cbb440d66e3f85f140966f95b033add442da5d0" -- ) 1>"D:\JT\ws\FR@1\tmp_398568.tmp" 2>&1 
+[2022-06-15T16:00:04.788Z] 
+[2022-06-15T16:00:04.788Z] D:\JT\ws\FR@1\repo\apl\CA>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git reset --hard "0cbb440d66e3f85f140966f95b033add442da5d0" -- ) 1>"D:\JT\ws\FR@1\tmp_488099.tmp" 2>&1 
+[2022-06-15T16:00:09.619Z] 
+[2022-06-15T16:00:09.619Z] D:\JT\ws\FR@1\repo\apl\CA>(git clean -xffd ) 1>"D:\JT\ws\FR@1\tmp_961356.tmp" 2>&1 
+[2022-06-15T16:00:10.448Z] [18:00:10][WARNING] Output of command is empty. Check if 'cmdLog' is the right usage for that command
+[2022-06-15T16:00:15.464Z] 
+[2022-06-15T16:00:15.465Z] D:\JT\ws\FR@1\repo\apl\CA>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git fetch -p --recurse-submodules=no "origin" "develop_ca_c385" -- ) 1>"D:\JT\ws\FR@1\tmp_83187.tmp" 2>&1 
+[2022-06-15T16:00:23.583Z] 
+[2022-06-15T16:00:23.583Z] D:\JT\ws\FR@1\repo\apl\CA>(git config user.name ) 1>"D:\JT\ws\FR@1\tmp_899434.tmp" 
+[2022-06-15T16:00:28.566Z] 
+[2022-06-15T16:00:28.566Z] D:\JT\ws\FR@1\repo\apl\CA>del "D:\JT\ws\FR@1\tmp_899434.tmp" 
+[2022-06-15T16:00:32.159Z] 
+[2022-06-15T16:00:32.159Z] D:\JT\ws\FR@1\repo\apl\CA>(git config user.email ) 1>"D:\JT\ws\FR@1\tmp_926956.tmp" 
+[2022-06-15T16:00:35.786Z] 
+[2022-06-15T16:00:35.786Z] D:\JT\ws\FR@1\repo\apl\CA>del "D:\JT\ws\FR@1\tmp_926956.tmp" 
+[2022-06-15T16:00:40.603Z] 
+[2022-06-15T16:00:40.603Z] D:\JT\ws\FR@1\repo\apl\CA>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no   && git merge "44a2e66aecec6ee4b290a89327f9f2216cee8b5c" --squash ) 1>"D:\JT\ws\FR@1\tmp_281437.tmp" 2>&1 
+[2022-06-15T16:00:46.751Z] 
+[2022-06-15T16:00:46.751Z] D:\JT\ws\FR@1\repo\apl\CA>del "D:\JT\ws\FR@1\tmp_281437.tmp" 
+[2022-06-15T16:00:47.362Z] [18:00:47][INFO] Merge was a success.
+[2022-06-15T16:00:51.548Z] 
+[2022-06-15T16:00:51.548Z] D:\JT\ws\FR@1\repo\apl\CA>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git submodule sync --recursive ) 1>"D:\JT\ws\FR@1\tmp_15790.tmp" 2>&1 
+[2022-06-15T16:00:55.296Z] 
+[2022-06-15T16:00:55.296Z] D:\JT\ws\FR@1\repo\apl\CA>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git submodule update --init --recursive --force  ) 1>"D:\JT\ws\FR@1\tmp_365571.tmp" 2>&1 
+[2022-06-15T16:01:07.221Z] 
+[2022-06-15T16:01:07.221Z] D:\JT\ws\FR@1\repo\apl\CA>(set GIT_SSH_COMMAND=ssh -i "****" -o StrictHostKeyChecking=no  && git submodule foreach --recursive "git reset --hard HEAD && git clean -xffd" ) 1>"D:\JT\ws\FR@1\tmp_846239.tmp" 2>&1 
+[2022-06-15T16:01:09.628Z] [18:01:09][INFO] Merging 'develop_ca_c385' was a success.
+[2022-06-15T16:01:09.673Z] [18:01:09][WARNING] Skipping 'Repository.prepareSubmoduleGitRepo' because no env variable of '[CR]' is present
+[2022-06-15T16:01:09.679Z] [18:01:09][WARNING] 'runIfEnvIsSet' feature is used and is effective for skipping
